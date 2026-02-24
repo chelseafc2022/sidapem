@@ -75,7 +75,7 @@
               <th width="30%" v-if="sidapem != 11">Unit Kerja</th>
               <th width="12%" v-else>Kode RUP/Kontrak</th>
               <th>Nama Paket</th>
-              <th width="18%" v-if="sidapem == 11" >Lokasi</th>
+              <th width="18%" v-if="[11, 4, 2].includes(sidapem)" >Lokasi</th>
               <th width="12%">Jenis Pengadaan</th>
               <th width="12%">Nilai Pagu (Rp)</th>
               <th width="12%">Nilai Kontrak (Rp)</th>
@@ -91,7 +91,7 @@
               <td v-else>{{ data.kode_rup_kontrak }}</td>
 
               <td>{{ data.nama_paket }}</td>
-              <td v-if="sidapem == 11" >{{ data.lokasi_kegiatan }}</td>
+              <td v-if="[11, 4, 2].includes(sidapem)" >{{ data.lokasi_kegiatan }}</td>
               <td>{{ data.jenis_pengadaan }}</td>
               <td class="text-right">Rp. {{ UMUM.Rupiah(data.nilai_pagu || 0) }}</td>
               <td class="text-right">Rp. {{ UMUM.Rupiah(data.nilai_kontrak || 0) }}</td>
@@ -100,10 +100,10 @@
                   <q-btn size="xs" @click="openDetail(data)" glossy color="primary" icon="visibility" class="tbl_btn">
                     <q-tooltip content-class="bg-primary" content-style="font-size: 9px">Lihat Detail</q-tooltip>
                   </q-btn>
-                  <q-btn size="xs" v-if="sidapem == 11" @click="openEdit(data)" glossy color="orange" icon="create" class="tbl_btn">
+                  <q-btn size="xs" v-if="[11, 4, 2].includes(sidapem)" @click="openEdit(data)" glossy color="orange" icon="create" class="tbl_btn">
                     <q-tooltip content-class="bg-orange-9" content-style="font-size: 9px">Ubah</q-tooltip>
                   </q-btn>
-                  <q-btn size="xs" v-if="sidapem == 11" @click="openDelete(data)" glossy color="negative" icon="delete_forever"
+                  <q-btn size="xs" v-if="[11, 4, 2].includes(sidapem)" @click="openDelete(data)" glossy color="negative" icon="delete_forever"
                     class="tbl_btn">
                     <q-tooltip content-class="bg-red" content-style="font-size: 9px">Hapus</q-tooltip>
                   </q-btn>

@@ -9,7 +9,7 @@ Vue.use(Vuex)
 // var URL = 'http://localhost:5071/'
 var URL = 'https://server-sidapem.konaweselatankab.go.id/'
 // var URL = 'http://localhost:5035/'
-// var URL = 'http://192.168.1.8:5028/'
+// var URL = 'http://10.91.178.4:5054/'
 // var URL = 'https://servermonev.konaweselatankab.go.id/'
 // var URL = 'https://server.aurel.konaweselatankab.go.id/'
 
